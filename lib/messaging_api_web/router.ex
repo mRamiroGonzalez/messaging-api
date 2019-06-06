@@ -5,7 +5,9 @@ defmodule MessagingApiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", MessagingApiWeb do
+  scope "/api/v1", MessagingApiWeb do
     pipe_through :api
+
+    resources "/users", UserController, only: [:create, :show]
   end
 end

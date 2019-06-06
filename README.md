@@ -17,3 +17,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## Notes to myself
+`phx.gen.json [Context] [Schema Name] [plural schema name = db table name] [database field:data type]`  
+`example: mix phx.gen.json Accounts User users email:unique password_hash:string`
