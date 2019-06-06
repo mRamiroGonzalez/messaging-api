@@ -25,6 +25,11 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Guardian config to generate JSON Web Tokens
+config :messaging_api, MessagingApi.Guardian,
+  issuer: "messaging_api",
+  secret_key: "oUmqTyyDh/5yJoNGe2l9ThisIsNotAProdKeyJfww+2SyZ4mW8g9DV2c5ychaVT6"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
