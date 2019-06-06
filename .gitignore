@@ -36,5 +36,5 @@ messaging_api-*.tar
 /config/*.secret.exs
 
 # Intellij Files
-/.idea/*
+.idea/*
 *.iml
