@@ -8,6 +8,7 @@ defmodule MessagingApiWeb.Router do
   scope "/api/v1", MessagingApiWeb do
     pipe_through :api
 
-    post "/sign-up", UserController, :create
+    post "/sign_up", UserController, :create
+    post "/sign_in", UserController, :sign_in
   end
 end
