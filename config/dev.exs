@@ -51,6 +51,6 @@ config :phoenix, :plug_init_mode, :runtime
 config :messaging_api, MessagingApi.Repo,
   username: "postgres",
   password: "postgres",
-  database: "messaging_api_dev",
-  hostname: "localhost",
+  database: "messaging_api_db",
+  hostname: "10.10.0.2",
   pool_size: 10

@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+  postgresql_messagingapi_db:
+    image: postgres:10-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=messaging_api_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      my_network:
+        ipv4_address: 10.10.0.2
+#  web:
+#    image: "messaging_api:latest"
+#    ports:
+#      - "80:4000"
+#    env_file:
+#      - config/docker.env
+#    networks:
+#      my_network:
+#        ipv4_address: 10.10.0.2
+
+
+networks:
+  my_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.10.0.0/24
