@@ -1,27 +1,23 @@
 # MessagingApi
 
+## Development
 To start your Phoenix server:
 
+  * Start a local database `sudo service postgresql start`
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Docker-compose
+  * Build the image of the api `make build`
+  * Start the docker-compose `docker-compose -f docker/docker-compose.yml up --build`
 
-## Learn more
+## App releases (not implemented yet)
+Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).  
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
-
-## App releases
-https://hexdocs.pm/distillery/introduction/walkthrough.html  
-## Using docker
-https://hexdocs.pm/distillery/guides/working_with_docker.html  
+Distillery & Docker: https://hexdocs.pm/distillery/introduction/walkthrough.html  
 
 ## Notes to myself
 `phx.gen.json [Context] [Schema Name] [plural schema name = db table name] [database field:data type]`  
