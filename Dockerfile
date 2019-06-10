@@ -1,4 +1,4 @@
-FROM elixir:1.7.4-alpine
+FROM elixir:1.8.2-alpine
 
 ENV MIX_ENV=prod
 
