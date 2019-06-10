@@ -13,6 +13,6 @@ WORKDIR /app
 COPY mix* ./
 RUN mix do deps.get, deps.compile
 
-COPY ../ .
+COPY . .
 
 CMD ["mix", "do", "ecto.migrate",",","phx.server"]
