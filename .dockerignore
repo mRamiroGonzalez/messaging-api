@@ -2,8 +2,13 @@ _build/
 deps/
 .git/
 .gitignore
+.dockerignore
 Dockerfile
 Makefile
 README*
 test/
 priv/static/
+*.iml
+.idea/
+cover/
+docker/

@@ -51,21 +51,15 @@ config :logger, level: :info
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 
-# ## Using releases (distillery)
-#
-# If you are doing OTP releases, you need to instruct Phoenix
-# to start the server for all endpoints:
-#
-#     config :phoenix, :serve_endpoints, true
-#
-# Alternatively, you can configure exactly which server to
-# start per endpoint:
-#
-#     config :messaging_api, MessagingApiWeb.Endpoint, server: true
-#
+
 # Note you can't rely on `System.get_env/1` when using releases.
 # See the releases documentation accordingly.
+config :messaging_api, MessagingApi.Repo,
+       username: System.get_env("DATABASE_USER"),
+       password: System.get_env("DATABASE_PASS"),
+       database: System.get_env("DATABASE_NAME"),
+       hostname: System.get_env("DATABASE_HOST"),
+       pool_size: 10
 
-# Finally import the config/prod.secret.exs which should be versioned
-# separately.
-import_config "prod.secret.exs"
+config :messaging_api, MessagingApiWeb.Endpoint,
+       secret_key_base: System.get_env("SECRET_KEY_BASE")
